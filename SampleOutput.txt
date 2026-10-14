@@ -1,0 +1,23 @@
+=== BANK ACCOUNT DEMONSTRATION ===
+
+=== DEPOSIT VALIDATION ===
+Account S001: Deposit rejected. Amount must be positive.
+Account S001: Deposited $50.00. Balance: $550.00
+
+=== POLYMORPHIC WITHDRAWALS ===
+Processing S001 (SavingsAccount)
+Savings S001: Withdrawal of $500.00 rejected; minimum balance is $100.00.
+Processing C001 (CurrentAccount)
+Current C001: Withdrew $300.00. Balance: $-200.00
+Processing S002 (SavingsAccount)
+Savings S002: Withdrew $250.00. Balance: $750.00
+
+=== POLYMORPHIC MONTH-END PROCESSING ===
+Savings S001: Month-end interest $11.00 (2.0%). Balance: $561.00
+Current C001: Month-end fee $10.00 deducted. Balance: $-210.00
+Savings S002: Month-end interest $15.00 (2.0%). Balance: $765.00
+
+=== FINAL BALANCES ===
+S001 (SavingsAccount): $561.00
+C001 (CurrentAccount): $-210.00
+S002 (SavingsAccount): $765.00
